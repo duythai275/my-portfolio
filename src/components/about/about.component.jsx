@@ -1,5 +1,6 @@
 import React from 'react';
 
+import MyResume from '../../assets/resume/Resume_ThaiNguyen.pdf';
 import picture from "../../assets/img/profile-pic.png";
 import './about.styles.css';
 
@@ -14,7 +15,7 @@ const About = props => {
                     <p className="about__text">Software Developer Honor Graduate from SAIT with passion for developing and implementing new programs.<br/><br/>And I gain experience through all the works I have done as a Web Developer in Vietnam. I am eager to help you succeed as well as create an area for myself to grow and learn. </p>
                     <div>
                         {/* <input type="button" value="Download Resume" className="about__button button" /> */}
-                        <a href="#about" className="about__button button">Download Resume</a>
+                        <a href={MyResume} download className="about__button button">Download Resume</a>
                     </div>
                 </div>
                 <div className="about__img"><img src={picture} alt="profile" /></div>

@@ -4,6 +4,7 @@ import './header.styles.css';
 
 const Header = props => {
     const [ showMenu, setShowMenu ] = useState("nav__menu");
+    const [ menuItems, setMenuItems ] = useState(["nav__link active","nav__link","nav__link","nav__link"]);
 
     return (
         <header className="l-header">
@@ -14,16 +15,16 @@ const Header = props => {
                 <div className={showMenu} id="nav-menu">
                     <ul className="nav__list">
                         <li className="nav__item">
-                            <a href="#home" className="nav__link active">Home</a>
+                            <a href="#home" className={menuItems[0]} onClick={() => { setMenuItems(["nav__link active","nav__link","nav__link","nav__link"]); setShowMenu("nav__menu")} }>Home</a>
                         </li>
                         <li className="nav__item">
-                            <a href="#about" className="nav__link">About</a>
+                            <a href="#about" className={menuItems[1]} onClick={() => { setMenuItems(["nav__link active","nav__link","nav__link","nav__link"]); setShowMenu("nav__menu")} }>About</a>
                         </li>
                         <li className="nav__item">
-                            <a href="#skills" className="nav__link">Skills</a>
+                            <a href="#skills" className={menuItems[2]} onClick={() => { setMenuItems(["nav__link active","nav__link","nav__link","nav__link"]); setShowMenu("nav__menu")} }>Skills</a>
                         </li>
                         <li className="nav__item">
-                            <a href="#contact" className="nav__link">Contact</a>
+                            <a href="#contact" className={menuItems[3]} onClick={() => { setMenuItems(["nav__link active","nav__link","nav__link","nav__link"]); setShowMenu("nav__menu")} }>Contact</a>
                         </li>
                     </ul>
                 </div>
