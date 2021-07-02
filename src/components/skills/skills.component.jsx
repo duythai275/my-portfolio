@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
+import sr from '../../utils/scrollReveal';
 import "./skills.styles.css";
 
 const Skills = props => {
+
+    useEffect(() => {
+        sr.reveal('.skills__subtitle',{}); 
+        sr.reveal('.skills__text',{}); 
+        sr.reveal('.skills__data',{interval: 200}); 
+        sr.reveal('.skills__img',{delay: 600});
+    });
+
     return (
         <section className="skills section" id="skills">
             <h2 className="section-title">Skills</h2>

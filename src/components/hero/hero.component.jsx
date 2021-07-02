@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
+import sr from '../../utils/scrollReveal';
 import { ReactComponent as Avatar } from "../../assets/img/mf-avatar.svg";
 import "./hero.styles.css";
 
 const Hero = props => {
+
+    useEffect(() => {
+        sr.reveal('.home__title',{}); 
+        sr.reveal('.button',{delay: 200}); 
+        sr.reveal('.home__img',{delay: 400}); 
+        sr.reveal('.home__social-icon',{ interval: 200}); 
+        console.log("Hero");
+    });
+
     return (
         <section className="home bd-grid" id="home">
             <div className="home__profile bd-grid">
